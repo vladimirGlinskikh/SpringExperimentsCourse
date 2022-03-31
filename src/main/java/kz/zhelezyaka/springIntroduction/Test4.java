@@ -6,12 +6,12 @@ public class Test4 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext2.xml");
-        Dog myDog = context.getBean("myPet", Dog.class);
-        myDog.setName("Sharik");
-        Dog yourDog = context.getBean("myPet", Dog.class);
-        yourDog.setName("Strelka");
-        System.out.println(myDog.getName());
-        System.out.println(yourDog.getName());
+//        Dog myDog = context.getBean("myPet", Dog.class);
+//        myDog.setName("Sharik");
+//        Dog yourDog = context.getBean("myPet", Dog.class);
+//        yourDog.setName("Strelka");
+//        System.out.println(myDog.getName());
+//        System.out.println(yourDog.getName());
 
 
 //        System.out.println("Переменные ссылаются на один и тот же объект? "
@@ -19,5 +19,12 @@ public class Test4 {
 //        System.out.println(myDog);
 //        System.out.println(yourDog);
 //        context.close();
+
+        Dog myDog = context.getBean("myPet", Dog.class);
+        myDog.say();
+
+        Dog yourDog = context.getBean("myPet", Dog.class);
+        yourDog.say();
+        context.close();
     }
 }
