@@ -1,10 +1,5 @@
 package kz.zhelezyaka.springIntroduction;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-@Component("personBean")
 public class Person {
     private Pet pet;
     private String surname;
@@ -28,12 +23,12 @@ public class Person {
         this.age = age;
     }
 
-    public Person() {
-        System.out.println("Person bean is created");
+    public Person(Pet pet) {
+        System.out.println("Person bean is created in constructor with parameter");
+        this.pet = pet;
     }
 
-    @Autowired
-    public void setPet(@Qualifier("cat") Pet pet) {
+    public void setPet(Pet pet) {
         System.out.println("Class Person: we're set up pet");
         this.pet = pet;
     }
