@@ -10,22 +10,11 @@ public class TestBook {
         UniversityLibrary universityLibrary = context.getBean("universityLibrary",
                 UniversityLibrary.class);
 
-        Book book = context.getBean("book", Book.class);
-        universityLibrary.getBook(book);
+        universityLibrary.getBook();
         System.out.println("---------------");
 
-//        universityLibrary.returnBook();
-//        System.out.println("---------------");
-//
-//        universityLibrary.getMagazine();
-//        System.out.println("---------------");
-//        System.out.println();
-
-//        SchoolLibrary schoolLibrary = context.getBean("schoolLibrary",
-//                SchoolLibrary.class);
-//        schoolLibrary.getBook();
-//        System.out.println("---------------");
-//        schoolLibrary.returnBook();
+        universityLibrary.getMagazine();
+        System.out.println("---------------");
 
         context.close();
     }
