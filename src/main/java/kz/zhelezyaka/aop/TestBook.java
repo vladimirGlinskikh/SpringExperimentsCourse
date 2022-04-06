@@ -12,8 +12,9 @@ public class TestBook {
 
         universityLibrary.getBook();
         System.out.println("---------------");
-
-        universityLibrary.getMagazine();
+        universityLibrary.returnMagazine();
+        System.out.println("---------------");
+        universityLibrary.addBook();
         System.out.println("---------------");
 
         context.close();
