@@ -12,10 +12,12 @@ public class TestBook {
 
         universityLibrary.getBook();
         System.out.println("---------------");
-        universityLibrary.returnMagazine();
+        universityLibrary.getMagazine();
         System.out.println("---------------");
-        universityLibrary.addBook();
-        System.out.println("---------------");
+//        universityLibrary.returnMagazine();
+//        System.out.println("---------------");
+//        universityLibrary.addBook();
+//        System.out.println("---------------");
 
         context.close();
     }
