@@ -11,9 +11,12 @@ public class TestBook {
 
         University university = context.getBean("university", University.class);
         university.addStudents();
-        List<Student> students = university.getStudents();
-        System.out.println(students);
-
+        try {
+            List<Student> students = university.getStudents();
+            System.out.println(students);
+        } catch (Exception e) {
+            System.err.println("An exception was caught: " + e);
+        }
         context.close();
     }
 }
