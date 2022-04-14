@@ -11,6 +11,7 @@ public class UniversityLibrary extends AbstractLibrary {
     }
 
     public String returnBook() {
+        int a = 10 / 0;
         System.out.println("We're returning a book in university library");
         return "Java from Epam";
     }
