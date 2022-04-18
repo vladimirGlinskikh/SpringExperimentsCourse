@@ -11,3 +11,5 @@ CREATE TABLE employees
     salary     int,
     PRIMARY KEY (id)
 );
+
+SHOW TABLES;
