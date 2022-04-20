@@ -82,4 +82,12 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
+
+    public Detail getEmployeeDetail() {
+        return employeeDetail;
+    }
+
+    public void setEmployeeDetail(Detail employeeDetail) {
+        this.employeeDetail = employeeDetail;
+    }
 }

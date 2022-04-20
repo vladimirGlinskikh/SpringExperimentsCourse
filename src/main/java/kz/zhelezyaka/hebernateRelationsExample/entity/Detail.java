@@ -14,7 +14,7 @@ public class Detail {
     @Column(name = "city")
     private String city;
 
-    @Column(name = "phoneNumber")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     @Column(name = "email")
