@@ -1,4 +1,4 @@
-package kz.zhelezyaka.hebernateRelationsExample.entity;
+package kz.zhelezyaka.hibernateOneToOneRelationsExample.entity;
 
 import javax.persistence.*;
 

@@ -1,7 +1,7 @@
-package kz.zhelezyaka.hebernateRelationsExample;
+package kz.zhelezyaka.hibernateOneToOneRelationsExample;
 
-import kz.zhelezyaka.hebernateRelationsExample.entity.Detail;
-import kz.zhelezyaka.hebernateRelationsExample.entity.Employee;
+import kz.zhelezyaka.hibernateOneToOneRelationsExample.entity.Detail;
+import kz.zhelezyaka.hibernateOneToOneRelationsExample.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

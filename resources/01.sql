@@ -1,6 +1,18 @@
 DROP DATABASE IF EXISTS my_db;
 CREATE DATABASE IF NOT EXISTS my_db;
+
 USE my_db;
+
+CREATE TABLE employees
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(15),
+    surname VARCHAR(25),
+    salary INT,
+    department_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (department_id) REFERENCES departments(id)
+);
 
 CREATE TABLE details
 (
@@ -11,19 +23,17 @@ CREATE TABLE details
     PRIMARY KEY (id)
 );
 
-CREATE TABLE employees
+CREATE TABLE departments
 (
-    id         int NOT NULL AUTO_INCREMENT,
-    name       VARCHAR(15),
-    surname    VARCHAR(25),
-    department VARCHAR(20),
-    salary     int,
-    details_id int,
-    PRIMARY KEY (id),
-    FOREIGN KEY (details_id) REFERENCES details(id)
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(15),
+    max_salary INT,
+    min_salary INT,
+    PRIMARY KEY (id)
 );
 
 SHOW TABLES;
 
 SELECT * FROM details;
 SELECT * FROM employees;
+SELECT * FROM departments;
