@@ -35,15 +35,21 @@ public class Test1 {
 //            session.getTransaction().commit();
 //            System.out.println("Transaction was well done");
 
-//            session = factory.getCurrentSession();
-//
-//            session.beginTransaction();
-//            Department department = session.get(Department.class, 2);
-//            System.out.println(department);
-//            System.out.println(department.getEmployees());
-//
-//            session.getTransaction().commit();
-//            System.out.println("Transaction was well done");
+            session = factory.getCurrentSession();
+
+            session.beginTransaction();
+
+            System.out.println("Get department");
+            Department department = session.get(Department.class, 1);
+
+            System.out.println("Show department");
+            System.out.println(department);
+
+            System.out.println("Show employees of the department");
+            System.out.println(department.getEmployees());
+
+            session.getTransaction().commit();
+            System.out.println("Transaction was well done");
 
 //            session = factory.getCurrentSession();
 //
@@ -55,14 +61,14 @@ public class Test1 {
 //            session.getTransaction().commit();
 //            System.out.println("Transaction was well done");
 
-            session = factory.getCurrentSession();
-
-            session.beginTransaction();
-            Employee employee = session.get(Employee.class, 2);
-            session.delete(employee);
-
-            session.getTransaction().commit();
-            System.out.println("Transaction was well done");
+//            session = factory.getCurrentSession();
+//
+//            session.beginTransaction();
+//            Employee employee = session.get(Employee.class, 2);
+//            session.delete(employee);
+//
+//            session.getTransaction().commit();
+//            System.out.println("Transaction was well done");
         } finally {
             session.close();
             factory.close();
