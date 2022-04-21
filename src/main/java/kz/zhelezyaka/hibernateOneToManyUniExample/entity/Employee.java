@@ -1,4 +1,4 @@
-package kz.zhelezyaka.hibernateOneToManyRelationsExample.entity;
+package kz.zhelezyaka.hibernateOneToManyUniExample.entity;
 
 import javax.persistence.*;
 
@@ -15,14 +15,6 @@ public class Employee {
     private String surname;
     @Column(name = "salary")
     private int salary;
-
-    @ManyToOne(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.DETACH,
-            CascadeType.REFRESH,
-            CascadeType.MERGE})
-    @JoinColumn(name = "department_id")
-    private Department department;
 
     public Employee() {
     }
@@ -63,14 +55,6 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 
     @Override

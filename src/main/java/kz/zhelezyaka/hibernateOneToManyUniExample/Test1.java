@@ -1,7 +1,7 @@
-package kz.zhelezyaka.hibernateOneToManyRelationsExample;
+package kz.zhelezyaka.hibernateOneToManyUniExample;
 
-import kz.zhelezyaka.hibernateOneToManyRelationsExample.entity.Department;
-import kz.zhelezyaka.hibernateOneToManyRelationsExample.entity.Employee;
+import kz.zhelezyaka.hibernateOneToManyUniExample.entity.Department;
+import kz.zhelezyaka.hibernateOneToManyUniExample.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -50,7 +50,6 @@ public class Test1 {
 //            session.beginTransaction();
 //            Employee employee = session.get(Employee.class, 3);
 //            System.out.println(employee);
-//            System.out.println(employee.getDepartment());
 //
 //            session.getTransaction().commit();
 //            System.out.println("Transaction was well done");
@@ -58,8 +57,8 @@ public class Test1 {
             session = factory.getCurrentSession();
 
             session.beginTransaction();
-            Employee employee = session.get(Employee.class, 2);
-            session.delete(employee);
+            Department department = session.get(Department.class, 1);
+            session.delete(department);
 
             session.getTransaction().commit();
             System.out.println("Transaction was well done");

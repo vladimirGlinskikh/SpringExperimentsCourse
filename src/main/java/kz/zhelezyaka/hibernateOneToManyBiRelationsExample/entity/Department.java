@@ -1,4 +1,4 @@
-package kz.zhelezyaka.hibernateOneToManyRelationsExample.entity;
+package kz.zhelezyaka.hibernateOneToManyBiRelationsExample.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
